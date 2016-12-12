@@ -99,4 +99,6 @@ var validatorMdl = {};
 
     };
 
-    module.exports = validatorMdl;
+    try {
+        module.exports = validatorMdl;
+    } catch(e){}

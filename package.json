@@ -35,6 +35,10 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "coveralls": "^2.11.15",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-rename": "^1.2.2",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "mocha-lcov-reporter": "^1.2.0"
