@@ -1,7 +1,7 @@
 'use strict';
 
 var expect = require('chai').expect;
-var validateDocument = require('../index');
+var validateDocumentChecker = require('../index');
 
 var verificador = require('../verificar-documento');
 var validatorMdl = require('../src/validator-mdl');
@@ -9,34 +9,34 @@ var validatorMdl = require('../src/validator-mdl');
 
 describe('#verify CPF', function() {
     it('should return true if valid', function() {
-        var result = validateDocument('123.456.789-00');
+        var result = validateDocumentChecker('123.456.789-00');
         expect(result).to.equal(true);
     });
 
     it('should return false if invalid', function() {
-        var result = validateDocument('123.456.789-09');
+        var result = validateDocumentChecker('123.456.789-09');
         expect(result).to.equal(false);
     });
 });
 describe('#verify CNPJ', function() {
     it('should return true if valid', function() {
-        var result = validateDocument('12.345.678/0001-95');
+        var result = validateDocumentChecker('12.345.678/0001-95');
         expect(result).to.equal(true);
     });
 
     it('should return false if invalid', function() {
-        var result = validateDocument('12.345.678/0001-00');
+        var result = validateDocumentChecker('12.345.678/0001-00');
         expect(result).to.equal(false);
     });
 });
 describe('#verify PIS', function() {
     it('should return true if valid', function() {
-        var result = validateDocument('123.4567.890-0', true);
+        var result = validateDocumentChecker('123.4567.890-0', true);
         expect(result).to.equal(true);
     });
 
     it('should return false if invalid', function() {
-        var result = validateDocument('123.4567.890-1', true);
+        var result = validateDocumentChecker('123.4567.890-1', true);
         expect(result).to.equal(false);
     });
 });

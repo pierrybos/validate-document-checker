@@ -8,7 +8,7 @@ var validatorMdl = require('./src/validator-mdl')
  * @return {boolean}
  */
  function verificarDocumento(strDocument, numOneNumberInChecker){
-    console.warn('deprecated use "validateDocument" instead.')
+    console.warn('deprecated use "validateDocumentChecker" instead.')
    return validatorMdl.fnBolValidateDocument(strDocument, numOneNumberInChecker);
 };
 

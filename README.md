@@ -1,5 +1,5 @@
-[![Coverage Status](https://coveralls.io/repos/github/pierrybos/validar-documento/badge.svg?branch=master)](https://coveralls.io/github/pierrybos/validar-documento?branch=master)
-[![Build Status](https://travis-ci.org/pierrybos/validar-documento.svg?branch=master)](https://travis-ci.org/pierrybos/validar-documento)
+[![Coverage Status](https://coveralls.io/repos/github/pierrybos/validate-document-checker/badge.svg?branch=master)](https://coveralls.io/github/pierrybos/validate-document-checker?branch=master)
+[![Build Status](https://travis-ci.org/pierrybos/validate-document-checker.svg?branch=master)](https://travis-ci.org/pierrybos/validate-document-checker)
 
 
 Brazilian Document Validator
@@ -15,40 +15,40 @@ For the PIS there is the need of a extra parameter, a boolean, to inform that th
 
 CPF:
 
-    verificarDocumento('123.456.789-00'); // will return false
-    verificarDocumento('12345678900'); // will return false
-    verificarDocumento(12345678900); // will return false
+    validateDocumentChecker('123.456.789-00'); // will return false
+    validateDocumentChecker('12345678900'); // will return false
+    validateDocumentChecker(12345678900); // will return false
 
-    verificarDocumento('123.456.789-09'); // will return true
-    verificarDocumento('12345678909'); // will return true
-    verificarDocumento(123.456.789-09); // will return true
+    validateDocumentChecker('123.456.789-09'); // will return true
+    validateDocumentChecker('12345678909'); // will return true
+    validateDocumentChecker(123.456.789-09); // will return true
 
 CNPJ:
 
-    verificarDocumento('12.345.678/0001-00'); // will return false
-    verificarDocumento('12345678000100'); // will return false
-    verificarDocumento(12345678000100); // will return false
+    validateDocumentChecker('12.345.678/0001-00'); // will return false
+    validateDocumentChecker('12345678000100'); // will return false
+    validateDocumentChecker(12345678000100); // will return false
 
-    verificarDocumento('12.345.678/0001-95'); // will return true
-    verificarDocumento('12345678000195'); // will return true
-    verificarDocumento(12345678000195); // will return true
+    validateDocumentChecker('12.345.678/0001-95'); // will return true
+    validateDocumentChecker('12345678000195'); // will return true
+    validateDocumentChecker(12345678000195); // will return true
 
 
 PIS:
 
-    verificarDocumento('123.4567.890-1', true); // will return false
-    verificarDocumento('12345678901', true); // will return false
-    verificarDocumento(12345678901, true); // will return false
-    verificarDocumento('123.4567.890-0', true); // will return true
-    verificarDocumento('12345678900', true); // will return true
-    verificarDocumento(12345678900, true); // will return true
+    validateDocumentChecker('123.4567.890-1', true); // will return false
+    validateDocumentChecker('12345678901', true); // will return false
+    validateDocumentChecker(12345678901, true); // will return false
+    validateDocumentChecker('123.4567.890-0', true); // will return true
+    validateDocumentChecker('12345678900', true); // will return true
+    validateDocumentChecker(12345678900, true); // will return true
 
     // Second parameter boolean identifies if verify number has just one digit. Calculate changes.
 
 
 ## Installation
 
-  `npm install @pierrybos/verifica-documento`
+  `npm install @pierrybos/validate-document-checker`
 
 ## Tests
 

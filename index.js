@@ -7,12 +7,11 @@ var validatorMdl = require('./src/validator-mdl')
  * @param  {boolean} umDigitoVerificador - informa se documento possui apenas um digito, como o PIS, interfere na forma de cálculo.
  * @return {boolean}
  */
- function validateDocument(strDocument, numOneNumberInChecker){
-
+ function validateDocumentChecker(strDocument, numOneNumberInChecker){
 
    return validatorMdl.fnBolValidateDocument(strDocument, numOneNumberInChecker);
 
 };
 
 
-module.exports = validateDocument;
+module.exports = validateDocumentChecker;

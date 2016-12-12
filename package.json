@@ -1,8 +1,8 @@
 {
-  "name": "verifica-documento",
-  "version": "0.0.5",
+  "name": "validate-document-checker",
+  "version": "0.0.1",
   "description": "This code just checks if a brazilian document (CPF, CNPJ or PIS) is valid or not based on your verify code. For the PIS there is the need of a extra parameter, a boolean, to inform that the verify code has one character.",
-  "main": "verificar-documento.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec",
     "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*",
@@ -10,21 +10,28 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pierrybos/validar-documento.git"
+    "url": "https://github.com/pierrybos/validate-document-checker.git"
   },
   "keywords": [
     "cpf",
     "cnpj",
     "pis",
     "validador",
-    "validator"
+    "validator",
+    "validate document",
+    "document checker",
+    "brazilian document",
+    "brazilian",
+    "brazil",
+    "brasil",
+    "documento brasileiro"
   ],
   "author": "Pierry Bos <bos@pierry.net> (http://pierry.net)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pierrybos/validar-documento/issues"
+    "url": "https://github.com/pierrybos/validate-document-checker/issues"
   },
-  "homepage": "https://github.com/pierrybos/validar-documento",
+  "homepage": "https://github.com/pierrybos/validate-document-checker",
   "devDependencies": {
     "chai": "^3.5.0",
     "coveralls": "^2.11.15",
