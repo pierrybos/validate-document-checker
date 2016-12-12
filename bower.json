@@ -1,6 +1,6 @@
 {
   "name": "validateDocumentChecker",
-  "main": "index.js",
+  "main": "dist/validate-document-checker.js",
   "version": "0.0.3",
   "homepage": "https://github.com/pierrybos/validate-document-checker",
   "description": "Validate a brazilian identify document (CPF, CNPJ, PIS) with no care how is the type. Justi PIS need an extra parameter for inform that checker number has one, and not two, characters",
