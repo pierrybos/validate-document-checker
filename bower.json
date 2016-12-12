@@ -1,0 +1,31 @@
+{
+  "name": "validateDocumentChecker",
+  "main": "index.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/pierrybos/validate-document-checker",
+  "description": "Validate a brazilian identify document (CPF, CNPJ, PIS) with no care how is the type. Justi PIS need an extra parameter for inform that checker number has one, and not two, characters",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "cpf",
+    "cnpj",
+    "pis",
+    "brazil",
+    "brazilian",
+    "documents",
+    "validator",
+    "validar"
+  ],
+  "authors": [
+    "Pierry Bos"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
