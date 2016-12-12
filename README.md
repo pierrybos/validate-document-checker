@@ -48,7 +48,7 @@ PIS:
 
 ## Installation
 
-  `npm install @pierrybos/validate-document-checker`
+  `npm install validate-document-checker`
 
 ## Tests
 
