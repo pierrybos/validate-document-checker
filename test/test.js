@@ -51,6 +51,16 @@ describe('#front testing', function() {
             var result = frontValidator('123.4567.890-1', true);
             expect(result).to.equal(false);
         });
+
+        it('should return false if empty', function() {
+            var result = frontValidator('');
+            expect(result).to.equal(false);
+        });
+
+        it('should return false if empty', function() {
+            var result = frontValidator();
+            expect(result).to.equal(false);
+        });
     });
 
   });
@@ -129,6 +139,17 @@ describe('#module testing', function() {
             var result = verificador('123.4567.890-1', true);
             expect(result).to.equal(false);
         });
+
+        it('should return false if empty', function() {
+            var result = verificador('');
+            expect(result).to.equal(false);
+        });
+
+        it('should return false if empty', function() {
+            var result = verificador();
+            expect(result).to.equal(false);
+        });
+
     });
 
 
@@ -167,6 +188,18 @@ describe('#module testing', function() {
 
                 it('should return false if invalid', function() {
                     var result = validatorMdl.fnBolValidateDocument('123.4567.890-1', true);
+                    expect(result).to.equal(false);
+                });
+            });
+
+            describe('#verify empty', function(){
+                it('should return false if empty', function() {
+                    var result = validatorMdl.fnBolValidateDocument('');
+                    expect(result).to.equal(false);
+                });
+
+                it('should return false if empty', function() {
+                    var result = validatorMdl.fnBolValidateDocument();
                     expect(result).to.equal(false);
                 });
             });

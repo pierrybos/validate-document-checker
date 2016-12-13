@@ -20,6 +20,10 @@ var validatorMdl = {};
             var strDoc = String(strDocument);
             var numChecker = (bolOneNumberInChecker)?-1:-2;
 
+            if(strDoc.length == 0){
+                return false;
+            }
+
             // verificar se todos números são iguais
             if (self.fnBolAllCharactersEqual(strDoc)){ 
                 // retornar invalido se sim
