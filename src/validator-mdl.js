@@ -1,3 +1,4 @@
+;(function(commonjs){
 'use strict';
 
 
@@ -99,6 +100,10 @@ var validatorMdl = {};
 
     };
 
-    try {
+    if(commonjs){
         module.exports = validatorMdl;
-    } catch(e){}
+    } else {
+        window.validatorMdl = validatorMdl;
+    }
+
+})(typeof(exports) !== "undefined");

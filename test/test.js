@@ -8,10 +8,10 @@ var validatorMdl = require('../src/validator-mdl');
 
 var frontValidator = require('../dist/validate-document-checker.min');
 
-console.log(frontValidator);
-for(var prop in frontValidator){
-    console.log(prop);
-}
+// console.log(frontValidator);
+// for(var prop in frontValidator){
+//     console.log(prop);
+// }
 
 
 

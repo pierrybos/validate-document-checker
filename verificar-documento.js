@@ -1,6 +1,13 @@
-'use strict';
+;(function(commonjs){
 
-var validatorMdl = require('./src/validator-mdl')
+    'use strict';
+
+    if(commonjs){
+        var validatorMdl = require('./src/validator-mdl');
+    } else {
+        var validatorMdl = window.validatorMdl;
+    }
+
 /**
  * Método verifica se documento informado é valido, Retorna sucesso para CPF, CNPJ ou PIS
  * @param {String} documento - documento a ser verificado. Pode ser uma string '123.321.456-96' ou o numero 12332145696
@@ -9,8 +16,14 @@ var validatorMdl = require('./src/validator-mdl')
  */
  function verificarDocumento(strDocument, numOneNumberInChecker){
     console.warn('deprecated use "validateDocumentChecker" instead.')
-   return validatorMdl.fnBolValidateDocument(strDocument, numOneNumberInChecker);
+    return validatorMdl.fnBolValidateDocument(strDocument, numOneNumberInChecker);
 };
 
 
-module.exports = verificarDocumento;
+if(commonjs){
+    module.exports = verificarDocumento;
+} else {
+    window.verificarDocumento = verificarDocumento;
+}
+
+})(typeof(exports) !== 'undefined');
