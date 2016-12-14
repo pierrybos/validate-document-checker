@@ -41,8 +41,8 @@ var validatorMdl = {};
                     if(bolOneNumberInChecker){
 
                         return true;
-                    } else {
 
+                    } else {
 
                         return _fnBolValidateDocument(strDoc, true, bolAllowNineBaseCalc);
                     }
