@@ -17,6 +17,7 @@ var validatorMdl = {};
 
         function _fnBolValidateDocument(strDocument, bolOneNumberInChecker, bolAllowNineBaseCalc){
 
+
             var strDoc = String(strDocument);
             var numChecker = (bolOneNumberInChecker)?-1:-2;
 
@@ -30,15 +31,20 @@ var validatorMdl = {};
                 return false; 
             } else {
 
+
                 //número é valido, continuar validação
+
+
                 if( self.fnNumReturnCheckerNumber( strDoc.substring(0, (strDoc.length + numChecker)) , bolAllowNineBaseCalc) == strDoc.charAt((strDoc.length + numChecker))){
+
 
                     if(bolOneNumberInChecker){
 
                         return true;
                     } else {
 
-                        return self.fnBolValidateDocument(strDoc, true);
+
+                        return _fnBolValidateDocument(strDoc, true, bolAllowNineBaseCalc);
                     }
 
                 } else { 
@@ -46,6 +52,7 @@ var validatorMdl = {};
                 }
             }
         };
+
 
         return _fnBolValidateDocument(String(strDocument).replace(/[^0-9]/g, ''), bolOneNumberInChecker, bolOneNumberInChecker); 
     };  
@@ -64,6 +71,7 @@ var validatorMdl = {};
 
         for( var intIndex in strDocument ){
 
+
             if( (intCalc - intIndex) < 2 ){
                 intCalc += 8;
             }
@@ -71,19 +79,23 @@ var validatorMdl = {};
             intSum += ( strDocument[intIndex] * (intCalc - intIndex) ); 
         }
 
+
         return intSum;
     };
 
     validatorMdl.fnNumReturnCheckerNumber = function fnNumReturnCheckerNumberDef(strDocument, bolAllowNineBaseCalc){
 
-        var strDocument = String(strDocument);
-        var numCalc = ( this.fnNumReturnSum(strDocument, bolAllowNineBaseCalc) % 11 );
 
-        if(numCalc < 2){
+        var strDocument = String(strDocument);
+        var bolNotBaseNine = ( (strDocument.length == 10 || strDocument.length == 9) && !bolAllowNineBaseCalc );
+        var intFactor = bolNotBaseNine?10:1;
+        var numCalc = ( this.fnNumReturnSum(strDocument, bolAllowNineBaseCalc)* intFactor % 11 );
+
+        if(numCalc < 2 && !bolNotBaseNine){
             numCalc = 0;
         }
-        else {
-            numCalc = 11-numCalc;
+        else if(!bolNotBaseNine) {
+            numCalc = 11 - numCalc;
         }
 
         if( numCalc == 11 || numCalc == 10){
